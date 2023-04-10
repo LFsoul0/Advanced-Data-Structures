@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon.png</file>
+        <file>Basic-doc.pdf</file>
+    </qresource>
+</RCC>

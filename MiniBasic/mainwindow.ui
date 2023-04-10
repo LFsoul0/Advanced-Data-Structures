@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1031</width>
+    <height>840</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MiniBasic</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/icon.png</normalon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="3,0,0">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>7</number>
+      </property>
+      <property name="topMargin">
+       <number>7</number>
+      </property>
+      <property name="rightMargin">
+       <number>7</number>
+      </property>
+      <property name="bottomMargin">
+       <number>7</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <widget class="QTextBrowser" name="codeBrowser">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="labelResult">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>运行结果</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelTree">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>语句与语法树</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelCode">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>代码</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTextBrowser" name="resultBrowser">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextBrowser" name="treeBrowser">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="labelVar">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>当前变量</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTextBrowser" name="varBrowser">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,1,0,1,0,1">
+        <property name="leftMargin">
+         <number>20</number>
+        </property>
+        <property name="topMargin">
+         <number>12</number>
+        </property>
+        <property name="rightMargin">
+         <number>20</number>
+        </property>
+        <property name="bottomMargin">
+         <number>12</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="loadButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>载入代码（LOAD）</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="runButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>执行代码（RUN）</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="debugButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>调试/单步（DEBUG/STEP）</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearButton">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+          <property name="text">
+           <string>清空代码（CLAER）</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,2">
+        <item>
+         <widget class="QLabel" name="labelInput">
+          <property name="font">
+           <font>
+            <family>黑体</family>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>命令输入窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="inputEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>黑体</family>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>IBeamCursor</cursorShape>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1031</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionLoad"/>
+    <addaction name="actionClearAndLoad"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menuExec">
+    <property name="title">
+     <string>调试</string>
+    </property>
+    <addaction name="actionRun"/>
+    <addaction name="actionDebug"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExec"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionLoad">
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionClearAndLoad">
+   <property name="text">
+    <string>清空并打开</string>
+   </property>
+   <property name="toolTip">
+    <string>清空并打开</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>使用指南</string>
+   </property>
+  </action>
+  <action name="actionRun">
+   <property name="text">
+    <string>执行</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="toolTip">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="actionDebug">
+   <property name="text">
+    <string>调试/单步</string>
+   </property>
+   <property name="toolTip">
+    <string>调试/单步</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

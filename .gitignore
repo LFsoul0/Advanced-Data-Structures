@@ -1,0 +1,13 @@
+*
+!.gitignore
+
+!MiniBasic/
+!MiniBasic/**
+!LSM_Tree/
+!LSM_Tree/**
+
+*/debug/
+*/release/
+*.7z
+*.rar
+*.zip
